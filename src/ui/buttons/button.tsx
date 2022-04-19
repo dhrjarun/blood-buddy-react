@@ -20,6 +20,7 @@ export interface ButtonProps extends HTMLChakraProps<"button"> {
   isDisabled?: boolean;
   isFullWidth?: boolean;
   isLoading?: boolean;
+  isTranslateOnActive?: boolean;
   leftIcon?: React.ReactElement;
   rightIcon?: React.ReactElement;
   iconSpacing?: SystemProps["marginRight"];
@@ -57,6 +58,7 @@ const Button = forwardRef<ButtonProps, "button">((props, ref) => {
 });
 
 Button.defaultProps = {
+  isTranslateOnActive: true,
   colorScheme: "primary",
   variant: "solid",
   size: "md",

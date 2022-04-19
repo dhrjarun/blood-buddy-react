@@ -10,7 +10,7 @@ const baseStyle: SystemStyleFunction = (props) => {
     _focus: { boxShadow: "none" },
     borderRadius: props.isRound ? "999" : "md",
     _focusVisible: { boxShadow: "outline" },
-    _active: props.variant === "link" ? {} : { transform: "translateY(5%)" },
+    _active: props.isTranslateOnActive ? { transform: "translateY(5%)" } : {},
     _disabled: {
       boxShadow: "none",
       _active: {
