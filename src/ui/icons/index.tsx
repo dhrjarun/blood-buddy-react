@@ -1,9 +1,10 @@
 import Icon from "./icon";
 import { IconProps } from "./icon";
 import { IconType } from "react-icons";
+import IconContext from "./contexts";
 import { BsCheck, BsGearFill, BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { AiFillBell } from "react-icons/ai";
-import IconContext from "./contexts";
+import { HiSun, HiMoon } from "react-icons/hi";
 
 export default Icon;
 
@@ -20,3 +21,5 @@ export const GearFillIcon = createIcon(BsGearFill);
 export const EyeFillIcon = createIcon(BsEyeFill);
 export const EyeSlashFillIcon = createIcon(BsEyeSlashFill);
 export const BellFillIcon = createIcon(AiFillBell);
+export const SunIcon = createIcon(HiSun);
+export const MoonIcon = createIcon(HiMoon);
