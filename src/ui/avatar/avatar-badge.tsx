@@ -1,44 +1,46 @@
+import React from "react";
 import {
   AvatarBadge as CAvatarBadge,
-  forwardRef,
-  HTMLChakraProps,
+  AvatarBadgeProps as CAvatarBadgeProps,
   useStyles,
   SystemStyleObject,
 } from "@chakra-ui/react";
 
-export interface AvatarBadgeProps extends HTMLChakraProps<"div"> {
+export interface AvatarBadgeProps extends CAvatarBadgeProps {
   bloodGroup: "AB+" | "AB-" | "B+" | "B-" | "A+" | "A-" | "O+" | "O-";
 }
 
-export const AvatarBadge = forwardRef<AvatarBadgeProps, "div">((props, ref) => {
-  const { bloodGroup, ...rest } = props;
+export const AvatarBadge = React.forwardRef<HTMLDivElement, AvatarBadgeProps>(
+  (props, ref) => {
+    const { bloodGroup, ...rest } = props;
 
-  const styles = useStyles();
+    const styles = useStyles();
 
-  const badgeStyles: SystemStyleObject = {
-    position: "absolute",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    insetEnd: "0",
-    bottom: "0",
-    ...styles.badge,
-    right: "unset",
-    border: "none",
-    bg: "red.100",
-    color: "red.700",
-    fontSize: "0.5em",
-    fontWeight: "bold",
-    minW: "2.5em",
-    px: "0.5em",
-    py: "0.2em",
-    transform: "translateY(35%)",
-    borderRadius: "4px",
-  };
+    const badgeStyles: SystemStyleObject = {
+      position: "absolute",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      insetEnd: "0",
+      bottom: "0",
+      ...styles.badge,
+      right: "unset",
+      border: "none",
+      bg: "red.100",
+      color: "red.700",
+      fontSize: "0.5em",
+      fontWeight: "bold",
+      minW: "2.5em",
+      px: "0.5em",
+      py: "0.2em",
+      transform: "translateY(35%)",
+      borderRadius: "4px",
+    };
 
-  return (
-    <CAvatarBadge sx={badgeStyles} {...rest}>
-      {bloodGroup}
-    </CAvatarBadge>
-  );
-});
+    return (
+      <CAvatarBadge ref={ref} sx={badgeStyles} {...rest}>
+        {bloodGroup}
+      </CAvatarBadge>
+    );
+  }
+);
