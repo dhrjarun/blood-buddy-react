@@ -22,7 +22,7 @@ export default {
       );
     },
   ],
-} as ComponentMeta<typeof FormControl>;
+} as ComponentMeta<typeof Form>;
 
 type FormValue = {
   name: string;

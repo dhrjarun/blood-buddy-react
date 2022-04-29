@@ -27,16 +27,18 @@ export function useFormContext() {
 
 export interface FormProps extends HTMLChakraProps<"form">, FormContextProps {}
 
-export const Form = forwardRef<FormProps, "form">((props, ref) => {
-  const [contextProps, { children, ...rest }] = separateFormProps(props);
-  return (
-    <FormContext.Provider value={contextProps}>
-      <chakra.form ref={ref} {...rest}>
-        {children}
-      </chakra.form>
-    </FormContext.Provider>
-  );
-});
+export const Form = React.forwardRef<HTMLFormElement, FormProps>(
+  (props, ref) => {
+    const [contextProps, { children, ...rest }] = separateFormProps(props);
+    return (
+      <FormContext.Provider value={contextProps}>
+        <chakra.form ref={ref} {...rest}>
+          {children}
+        </chakra.form>
+      </FormContext.Provider>
+    );
+  }
+);
 Form.defaultProps = {};
 
 function separateFormProps(
