@@ -2,12 +2,12 @@ import React from "react";
 import {
   AvatarBadge as CAvatarBadge,
   AvatarBadgeProps as CAvatarBadgeProps,
-  useStyles,
   SystemStyleObject,
 } from "@chakra-ui/react";
-
+import { useStyles } from "@chakra-ui/system";
+import { BloodGroup } from "types";
 export interface AvatarBadgeProps extends CAvatarBadgeProps {
-  bloodGroup: "AB+" | "AB-" | "B+" | "B-" | "A+" | "A-" | "O+" | "O-";
+  bloodGroup: BloodGroup;
 }
 
 export const AvatarBadge = React.forwardRef<HTMLDivElement, AvatarBadgeProps>(
@@ -23,7 +23,7 @@ export const AvatarBadge = React.forwardRef<HTMLDivElement, AvatarBadgeProps>(
       justifyContent: "center",
       insetEnd: "0",
       bottom: "0",
-      ...styles.badge,
+      ...styles?.badge,
       right: "unset",
       border: "none",
       bg: "red.100",
