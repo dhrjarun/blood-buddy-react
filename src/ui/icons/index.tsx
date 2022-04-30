@@ -11,7 +11,7 @@ export default Icon;
 export const IconProvider = IconContext.Provider;
 
 export function createIcon(as: IconType) {
-  return (props: Omit<IconProps, "as">) => {
+  return (props: Omit<IconProps, "as">): React.ReactElement => {
     return <Icon as={as} {...props} />;
   };
 }
