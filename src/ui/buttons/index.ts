@@ -3,3 +3,4 @@ export { default as IconButton } from "./icon-button";
 export * from "./icon-button";
 export * from "./button";
 export * from "./button-group";
+export * from "./theme-switcher-button";
