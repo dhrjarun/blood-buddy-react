@@ -1,4 +1,4 @@
-import { chakra } from "@chakra-ui/react";
+import { chakra, useColorModeValue } from "@chakra-ui/react";
 import { useCardContext } from "./cardContext";
 import { Avatar, AvatarBadge } from ".././avatar";
 
@@ -6,6 +6,7 @@ export interface CardTopProps {}
 
 export const CardTop: React.FC<CardTopProps> = (props) => {
   const { name, bloodGroup, age, gender } = useCardContext()!;
+  const nameColor = useColorModeValue("gray.800", "gray.50");
 
   return (
     <chakra.div
@@ -17,7 +18,7 @@ export const CardTop: React.FC<CardTopProps> = (props) => {
       </Avatar>
 
       <chakra.div>
-        <chakra.p fontSize="lg" color="gray.800" fontWeight="medium">
+        <chakra.p fontSize="lg" color={nameColor} fontWeight="medium">
           {name}
         </chakra.p>
         <chakra.p color="gray.500">{`${age} ${gender}`}</chakra.p>

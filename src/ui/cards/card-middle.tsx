@@ -1,22 +1,22 @@
 import { chakra } from "@chakra-ui/react";
 import { useCardContext } from "./cardContext";
 import { Button } from "../buttons";
+import {
+  mode,
+  SystemStyleFunction,
+  SystemStyleObject,
+} from "@chakra-ui/theme-tools";
+import { useMultiStyle } from "style-tools";
 
 export interface CardMiddleProps {}
 
 export const CardMiddle: React.FC<CardMiddleProps> = (props) => {
   const { quantity, location, timing } = useCardContext()!;
 
+  const style = useMultiStyle(CardMiddleStyle, props);
+
   return (
-    <chakra.div
-      __css={{
-        px: "4",
-        py: "6",
-        color: "gray.600",
-        bg: "gray.100",
-      }}
-      {...props}
-    >
+    <chakra.div __css={style.container} {...props}>
       <chakra.div
         __css={{
           display: "flex",
@@ -39,4 +39,17 @@ export const CardMiddle: React.FC<CardMiddleProps> = (props) => {
       </chakra.p>
     </chakra.div>
   );
+};
+
+const CardMiddleStyle: {
+  container: SystemStyleObject | SystemStyleFunction;
+} = {
+  container: (props) => {
+    return {
+      color: mode("gray.600", "gray.500")(props),
+      bg: mode("gray.100", "gray.800")(props),
+      px: "4",
+      py: "6",
+    };
+  },
 };
