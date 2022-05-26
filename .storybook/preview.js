@@ -1,4 +1,5 @@
-import theme from "../src/theme";
+import theme from "@blood-buddy/theme";
+import { ChakraProvider } from "@chakra-ui/react";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,5 +9,14 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  chakra: { theme },
 };
+
+const withThemeProvider = (Story, context) => {
+  return (
+    <ChakraProvider theme={theme}>
+      <Story {...context} />
+    </ChakraProvider>
+  );
+};
+
+export const decorators = [withThemeProvider];

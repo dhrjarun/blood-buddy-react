@@ -1,0 +1,11 @@
+{
+  "name": "@blood-buddy/hooks",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "author": "<dhrjarun@gmail.com> Dhiraj Arun",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@mantine/hooks": "^4.2.6"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@blood-buddy/theme",
+  "private": true,
+  "main": "src/index.ts",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "hooks": "^0.3.2"
+  }
+}

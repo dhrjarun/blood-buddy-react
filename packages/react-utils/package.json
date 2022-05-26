@@ -1,0 +1,11 @@
+{
+  "name": "@blood-buddy/react-utils",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Dhiraj Arun <dhrjarun@gmail.com>",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "dependencies": {
+    "react": "^18.1.0"
+  }
+}

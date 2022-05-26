@@ -1,0 +1,10 @@
+0 silly argv {
+0 silly argv   _: [ 'create' ],
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': 'lerna',
+0 silly argv   name: 'hooks'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/dhirajarun/DProjects/d-blood
+3 info versioning independent
+4 error
