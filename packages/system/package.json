@@ -1,0 +1,13 @@
+{
+  "name": "@blood-buddy/system",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "author": "<dhrjarun@gmail.com> Dhiraj Arun",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/react": "^2.1.2",
+    "@chakra-ui/system": "^2.1.1",
+    "@chakra-ui/theme-tools": "^2.0.1"
+  }
+}
