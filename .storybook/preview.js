@@ -1,5 +1,5 @@
 import theme from "@blood-buddy/theme";
-import { ChakraProvider } from "@chakra-ui/react";
+import { MainProvider } from "@blood-buddy/system";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -13,9 +13,9 @@ export const parameters = {
 
 const withThemeProvider = (Story, context) => {
   return (
-    <ChakraProvider theme={theme}>
+    <MainProvider theme={theme}>
       <Story {...context} />
-    </ChakraProvider>
+    </MainProvider>
   );
 };
 
