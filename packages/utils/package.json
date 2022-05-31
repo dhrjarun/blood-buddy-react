@@ -1,11 +1,14 @@
 {
-  "name": "@blood-buddy/react-utils",
+  "name": "@blood-buddy/utils",
   "private": true,
   "version": "1.0.0",
   "author": "Dhiraj Arun <dhrjarun@gmail.com>",
   "license": "ISC",
   "main": "src/index.ts",
   "dependencies": {
+    "@chakra-ui/react-utils": "^2.0.0",
+    "@chakra-ui/theme-tools": "^2.0.1",
+    "@chakra-ui/utils": "^2.0.1",
     "react": "^18.1.0"
   }
 }
