@@ -13,6 +13,5 @@ export const Avatar = React.forwardRef<HTMLSpanElement, AvatarProps>(
 );
 
 function getInitials(name: string): string {
-  console.log(name.charAt(0).toUpperCase(), "ok");
   return name.charAt(0).toUpperCase();
 }

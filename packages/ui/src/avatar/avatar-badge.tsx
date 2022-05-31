@@ -4,7 +4,6 @@ import {
   AvatarBadgeProps as CAvatarBadgeProps,
   SystemStyleObject,
 } from "@chakra-ui/react";
-import { useStyles } from "@chakra-ui/system";
 import { BloodGroup } from "common/types";
 export interface AvatarBadgeProps extends CAvatarBadgeProps {
   bloodGroup: BloodGroup;
@@ -14,8 +13,6 @@ export const AvatarBadge = React.forwardRef<HTMLDivElement, AvatarBadgeProps>(
   (props, ref) => {
     const { bloodGroup, ...rest } = props;
 
-    const styles = useStyles();
-
     const badgeStyles: SystemStyleObject = {
       position: "absolute",
       display: "flex",
@@ -23,7 +20,6 @@ export const AvatarBadge = React.forwardRef<HTMLDivElement, AvatarBadgeProps>(
       justifyContent: "center",
       insetEnd: "0",
       bottom: "0",
-      ...styles?.badge,
       right: "unset",
       border: "none",
       bg: "red.100",
