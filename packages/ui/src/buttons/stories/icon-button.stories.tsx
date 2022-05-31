@@ -11,6 +11,7 @@ export default {
 
 export const simple = ({ icon }: { icon: React.ReactElement }) => (
   <HStack>
+    <IconButton size="xs" aria-label="icon" icon={icon} />
     <IconButton size="sm" aria-label="icon">
       {icon}
     </IconButton>
